@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from st_aggrid import AgGrid
-
+import requests
 
 
 palette = [
@@ -41,7 +41,7 @@ if st.sidebar.checkbox("Show raw data"):
             with col2:
                 reset = st.button("Reset Data")
             if reset:
-                st.session_state.df = pd.read_pickle('./amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl')
+                st.session_state.df = pd.read_pickle(requests.get('https://github.com/MahmoudBahar/Amazon-Delivery-Analyses/raw/main/StreamLit/amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl').content)
                 st.success("Data reseted successfully!", icon = '✅')
             st.session_state.df = st.data_editor(st.session_state.df)
         elif password != '':
