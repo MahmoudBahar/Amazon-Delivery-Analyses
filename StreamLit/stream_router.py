@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 from io import BytesIO
 
-st.set_page_config(layout="wide", initial_sidebar_state='collapsed')
+st.set_page_config(page_icon= "Delivery Analyses", layout="wide", initial_sidebar_state='collapsed')
 @st.cache_data
 def load_data():
     return pd.read_pickle(BytesIO(requests.get("https://github.com/MahmoudBahar/Amazon-Delivery-Analyses/raw/main/Amazon%20Delivery%20Dataset/amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl").content))
