@@ -31,27 +31,27 @@ with tab2:
         #     html_content = file.read()
         return requests.get("https://raw.githubusercontent.com/MahmoudBahar/Amazon-Delivery-Analyses/main/StreamLit/kepler.gl.html").content.decode('utf-8')
     components.html(load_kepler(), height=600)
-    @st.cache_data
-    def load_folium():
-        center_lat = (st.session_state.df['Drop Latitude'].mean() + st.session_state.df['Store Latitude'].mean())/2
-        center_lon = (st.session_state.df['Drop Longitude'].mean() + st.session_state.df['Store Longitude'].mean())/2
-        mymap = folium.Map(location=[center_lat, center_lon], zoom_start=3, tiles='CartoDB dark_matter')
-        marker_cluster = MarkerCluster().add_to(mymap)
-        def markers(row):
-            folium.Marker(
-                location=[row['Store Latitude'], row['Store Longitude']],
-                popup=f"Lat: {row['Store Latitude']}<br>Lon: {row['Store Longitude']}",
-                tooltip=f"{row['Order ID']}",
-                icon=folium.Icon(color='darkred', icon='fa-solid fa-store', icon_color='white', prefix = 'fa')
-            ).add_to(marker_cluster)
-            folium.Marker(
-                location=[row['Drop Latitude'], row['Drop Longitude']],
-                popup=f"Lat: {row['Drop Latitude']}<br>Lon: {row['Drop Longitude']}",
-                tooltip=f"{row['Order ID']}",
-                icon=folium.Icon(color='darkred', icon='fa-solid fa-truck-ramp-box', icon_color='white', prefix = 'fa')
-            ).add_to(marker_cluster)
+    # @st.cache_data
+    # def load_folium():
+    #     center_lat = (st.session_state.df['Drop Latitude'].mean() + st.session_state.df['Store Latitude'].mean())/2
+    #     center_lon = (st.session_state.df['Drop Longitude'].mean() + st.session_state.df['Store Longitude'].mean())/2
+    #     mymap = folium.Map(location=[center_lat, center_lon], zoom_start=3, tiles='CartoDB dark_matter')
+    #     marker_cluster = MarkerCluster().add_to(mymap)
+    #     def markers(row):
+    #         folium.Marker(
+    #             location=[row['Store Latitude'], row['Store Longitude']],
+    #             popup=f"Lat: {row['Store Latitude']}<br>Lon: {row['Store Longitude']}",
+    #             tooltip=f"{row['Order ID']}",
+    #             icon=folium.Icon(color='darkred', icon='fa-solid fa-store', icon_color='white', prefix = 'fa')
+    #         ).add_to(marker_cluster)
+    #         folium.Marker(
+    #             location=[row['Drop Latitude'], row['Drop Longitude']],
+    #             popup=f"Lat: {row['Drop Latitude']}<br>Lon: {row['Drop Longitude']}",
+    #             tooltip=f"{row['Order ID']}",
+    #             icon=folium.Icon(color='darkred', icon='fa-solid fa-truck-ramp-box', icon_color='white', prefix = 'fa')
+    #         ).add_to(marker_cluster)
 
-        st.session_state.df.reset_index().apply(markers, axis = 1)
-        return mymap
-    m = load_folium()
-    st_folium(m, width=700, height=500)
+    #     st.session_state.df.reset_index().apply(markers, axis = 1)
+    #     return mymap
+    # m = load_folium()
+    # st_folium(m, width=700, height=500)
