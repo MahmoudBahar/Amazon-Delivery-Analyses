@@ -11,7 +11,7 @@ palette = [
 
 # with open('./animations/delivery-animate.svg', 'r') as file:
 #     svg_content = file.read()
-st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{requests.get("https://github.com/MahmoudBahar/Amazon-Delivery-Analyses/blob/main/StreamLit/animations/analysis-animate.svg").content}</div>", unsafe_allow_html=True)
+st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{requests.get("https://raw.githubusercontent.com/MahmoudBahar/Amazon-Delivery-Analyses/main/StreamLit/animations/analysis-animate.svg").content}</div>", unsafe_allow_html=True)
 st.title("Delivery Data Overview")
 
 st.header("Summary Statistics")
