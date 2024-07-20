@@ -16,7 +16,7 @@ fig = ff.create_distplot(hist_data=[st.session_state.df['Agent Rating']], group_
 st.plotly_chart(fig)
 
 st.header("Agent Age Distribution")
-fig = px.histogram(st.session_state.df.astype('string'), x='Agent Age')
+fig = ff.create_distplot(hist_data=[st.session_state.df['Agent Age']], group_labels=['Agent Age'], colors=['maroon'], histnorm='', show_hist=False)
 st.plotly_chart(fig)
 
 st.header("Filter by Agent Rating")
