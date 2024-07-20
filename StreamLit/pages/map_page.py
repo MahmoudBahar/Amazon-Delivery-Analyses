@@ -6,9 +6,9 @@ from folium.plugins import MarkerCluster
 from streamlit_folium import st_folium
 
 
-with open('./animations/paper-map-animate.svg', 'r') as file:
-    svg_content = file.read()
-st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{svg_content}</div>", unsafe_allow_html=True)
+# with open('./animations/paper-map-animate.svg', 'r') as file:
+#     svg_content = file.read()
+st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{requests.get("https://raw.githubusercontent.com/MahmoudBahar/Amazon-Delivery-Analyses/main/StreamLit/animations/paper-map-animate.svg").content}</div>", unsafe_allow_html=True)
 st.title("Maps")
 tab1, tab2 = st.tabs(['Map Analysis', 'Advanceed Map Analysis'])
 with tab1:
