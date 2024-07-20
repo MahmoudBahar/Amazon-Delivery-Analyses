@@ -48,7 +48,7 @@ with tab2:
                 icon=folium.Icon(color='darkred', icon='fa-solid fa-truck-ramp-box', icon_color='white', prefix = 'fa')
             ).add_to(marker_cluster)
 
-        st.session_state.df.apply(markers, axis = 1)
+        st.session_state.df.reset_index().apply(markers, axis = 1)
         return mymap
     m = load_folium()
     st_folium(m, width=700, height=500)
