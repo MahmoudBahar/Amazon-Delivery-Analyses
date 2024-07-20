@@ -1,7 +1,0 @@
-plotly
-streamlit-aggrid
-folium
-pandas
-numpy
-streamlit-folium
-requests
