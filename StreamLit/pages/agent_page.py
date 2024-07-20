@@ -1,6 +1,7 @@
 import streamlit as st
 import plotly.express as px
 import requests
+import plotly.figure_factory as ff
 
 # with open('./animations/delivery-animate2.svg', 'r') as file:
 #     svg_content = file.read()
@@ -11,7 +12,7 @@ st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{load_svg(
 st.title("Agent Performance")
 
 st.header("Agent Rating Distribution")
-fig = px.histogram(st.session_state.df.astype('string'), x=st.session_state.df['Agent Rating'].astype('string'))
+fig = ff.create_distplot(hist_data=[st.session_state.df], x=['Agent Rating'], histnorm='', show_hist=False)
 st.plotly_chart(fig)
 
 st.header("Agent Age Distribution")
