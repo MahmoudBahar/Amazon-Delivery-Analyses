@@ -1,6 +1,7 @@
 import streamlit as st
 import plotly.express as px
 from st_aggrid import AgGrid
+import requests
 # with open('./animations/analysis-animate.svg', 'r') as file:
 #     svg_content = file.read()
 @st.cache_data
