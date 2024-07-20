@@ -41,7 +41,7 @@ if st.sidebar.checkbox("Show raw data"):
             with col2:
                 reset = st.button("Reset Data")
             if reset:
-                st.session_state.df = pd.read_pickle('./amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl')
+                st.session_state.df = pd.read_pickle('amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl')
                 st.success("Data reseted successfully!", icon = '✅')
             st.session_state.df = st.data_editor(st.session_state.df)
         elif password != '':

@@ -4,7 +4,7 @@ import pandas as pd
 st.set_page_config(layout="wide")
 @st.cache_data
 def load_data():
-    st.session_state.df = pd.read_pickle('./amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl')
+    st.session_state.df = pd.read_pickle('amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl')
 if 'df' not in st.session_state:
     load_data()
     st.session_state.reset_data = load_data
