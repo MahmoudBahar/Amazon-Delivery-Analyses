@@ -12,7 +12,7 @@ st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{load_svg(
 st.title("Agent Performance")
 
 st.header("Agent Rating Distribution")
-fig = ff.create_distplot(hist_data=[st.session_state.df], x=['Agent Rating'], histnorm='', show_hist=False)
+fig = ff.create_distplot(hist_data=[st.session_state.df], group_labels=['Agent Rating'], histnorm='', show_hist=False)
 st.plotly_chart(fig)
 
 st.header("Agent Age Distribution")
