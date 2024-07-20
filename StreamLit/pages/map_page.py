@@ -8,7 +8,10 @@ import requests
 
 # with open('./animations/paper-map-animate.svg', 'r') as file:
 #     svg_content = file.read()
-st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{requests.get("https://raw.githubusercontent.com/MahmoudBahar/Amazon-Delivery-Analyses/main/StreamLit/animations/paper-map-animate.svg").content.decode('utf-8')}</div>", unsafe_allow_html=True)
+@st.cache_data
+def load_svg():
+    return requests.get("https://raw.githubusercontent.com/MahmoudBahar/Amazon-Delivery-Analyses/main/StreamLit/animations/paper-map-animate.svg").content.decode('utf-8')
+st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{load_svg()}</div>", unsafe_allow_html=True)
 st.title("Maps")
 tab1, tab2 = st.tabs(['Map Analysis', 'Advanceed Map Analysis'])
 with tab1:
@@ -24,9 +27,9 @@ with tab1:
 with tab2:
     @st.cache_data
     def load_kepler():
-        with open('./kepler.gl.html', 'r') as file:
-            html_content = file.read()
-        return html_content
+        # with open('./kepler.gl.html', 'r') as file:
+        #     html_content = file.read()
+        return requests.get("https://raw.githubusercontent.com/MahmoudBahar/Amazon-Delivery-Analyses/main/StreamLit/kepler.gl.html").content.decode('utf-8')
     components.html(load_kepler(), height=600)
     @st.cache_data
     def load_folium():

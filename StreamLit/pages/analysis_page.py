@@ -3,7 +3,10 @@ import plotly.express as px
 from st_aggrid import AgGrid
 # with open('./animations/analysis-animate.svg', 'r') as file:
 #     svg_content = file.read()
-st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{requests.get("https://raw.githubusercontent.com/MahmoudBahar/Amazon-Delivery-Analyses/main/StreamLit/animations/analysis-animate.svg").content.decode('utf-8')}</div>", unsafe_allow_html=True)
+@st.cache_data
+def load_svg():
+    return requests.get("https://raw.githubusercontent.com/MahmoudBahar/Amazon-Delivery-Analyses/main/StreamLit/animations/analysis-animate.svg").content.decode('utf-8')
+st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{load_svg()}</div>", unsafe_allow_html=True)
 st.title("Detailed Analysis")
 tab1, tab2 = st.tabs(['Static Analysis', 'Dynamic Analysis'])
 with tab1:
