@@ -1,12 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from datetime import datetime
 from st_aggrid import AgGrid
-import streamlit.components.v1 as components
-import folium
-from folium.plugins import MarkerCluster
-from streamlit_folium import st_folium
 
 
 

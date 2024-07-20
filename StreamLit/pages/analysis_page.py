@@ -7,8 +7,8 @@ st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{svg_conte
 st.title("Detailed Analysis")
 tab1, tab2 = st.tabs(['Static Analysis', 'Dynamic Analysis'])
 with tab1:
-    st.header("Traffic Along Pick-up Time")
-    fig = px.line(st.session_state.df.groupby(['Pickup Time', 'Traffic', 'Weather', 'Vehicle']).agg('count')['Order ID'].rename('count').reset_index(['Traffic', 'Weather', 'Vehicle']), y='count', color='Traffic', template='plotly_dark', color_discrete_sequence=px.colors.qualitative.Dark24).update_layout(yaxis_title='Number of orders')
+    st.header("Vehicles Along Pick-up Time")
+    fig = px.line(st.session_state.df.groupby(['Pickup Time', 'Vehicle']).agg('count')['Agent Age'].rename('count').reset_index(['Vehicle']).sort_index(), y='count', color='Vehicle', template='plotly_dark', color_discrete_sequence=px.colors.qualitative.Dark24).update_layout(yaxis_title='Number of orders')
     st.plotly_chart(fig)
     
     st.header("Store Types And Delivery Categories And Drop Types")
