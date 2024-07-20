@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
-import requests
 
 st.set_page_config(layout="wide", initial_sidebar_state='collapsed')
 @st.cache_data
 def load_data():
-    return pd.read_pickle(requests.get('https://github.com/MahmoudBahar/Amazon-Delivery-Analyses/raw/main/StreamLit/amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl').content)
+    return pd.read_pickle('../Amazon Delivery Dataset/amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl')
 if 'df' not in st.session_state:
     st.session_state.df = load_data()
     st.session_state.load_data = load_data
