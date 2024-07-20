@@ -9,9 +9,9 @@ palette = [
     "#323434", "#E1BCDA", "#8A8783", "#EADE61", "#F1EBE0", "#424445",
     "#B9B4A7", "#C8D0D2", "#E5C1B1", "#A6B7B9", "#F4A8A1", "#9B9B9B", "#D6E0C4","#F9F5E5"]
 
-with open('./animations/delivery-animate.svg', 'r') as file:
-    svg_content = file.read()
-st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{svg_content}</div>", unsafe_allow_html=True)
+# with open('./animations/delivery-animate.svg', 'r') as file:
+#     svg_content = file.read()
+st.markdown(f"<div style='width: 300px; height: 300px; align: center'>{requests.get("https://github.com/MahmoudBahar/Amazon-Delivery-Analyses/blob/main/StreamLit/animations/analysis-animate.svg").content}</div>", unsafe_allow_html=True)
 st.title("Delivery Data Overview")
 
 st.header("Summary Statistics")
@@ -41,7 +41,7 @@ if st.sidebar.checkbox("Show raw data"):
             with col2:
                 reset = st.button("Reset Data")
             if reset:
-                st.session_state.df = pd.read_pickle('../Amazon Delivery Dataset/amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl')
+                st.session_state.df = pd.read_pickle(BytesIO(requests.get("https://github.com/MahmoudBahar/Amazon-Delivery-Analyses/raw/main/Amazon%20Delivery%20Dataset/amazon_delivery_cleaned_and_extracted_features_final_streamlit.pkl").content))
                 st.success("Data reseted successfully!", icon = '✅')
             st.session_state.df = st.data_editor(st.session_state.df)
         elif password != '':
