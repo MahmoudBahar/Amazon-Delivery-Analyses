@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 from st_aggrid import AgGrid
 import requests
-
+from io import BytesIO
 
 palette = [
     "#323434", "#E1BCDA", "#8A8783", "#EADE61", "#F1EBE0", "#424445",
