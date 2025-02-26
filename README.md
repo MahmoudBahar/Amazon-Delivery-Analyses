@@ -53,19 +53,10 @@ pip install streamlit pandas numpy matplotlib seaborn scikit-learn
 - Pandas, NumPy, Matplotlib, Seaborn  
 - Scikit-learn (for ML-based predictions)  
 
-### Installation Steps  
-1. Clone the repository:  
+### Clone the repository
    ```bash
    git clone https://github.com/yourusername/Amazon-Delivery-Analyses.git
    cd Amazon-Delivery-Analyses
-   ```
-2. Install dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the Streamlit app:  
-   ```bash
-   streamlit run app.py
    ```
 
 ## Usage 🚚  
