@@ -1,7 +1,3 @@
-Here's a well-structured README for your **Amazon Delivery Analysis** project:  
-
----
-
 # Amazon Delivery Analysis 📦  
 
 <div align="center">
