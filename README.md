@@ -18,7 +18,6 @@ With an **interactive dashboard**, users can easily filter data, compare deliver
 - **Delivery Time Analysis** 📊: Visualize delivery performance and delays.  
 - **Geospatial Insights** 🌍: Explore delivery trends across different locations.  
 - **Customer Satisfaction Metrics** ⭐: Analyze ratings, feedback, and delivery success rates.  
-- **Predictive Analytics** 🔍: Use machine learning to estimate delivery times.  
 - **Interactive UI** 🎛️: Built with **Streamlit** for real-time data exploration.  
 
 ## How It Works 🛠️  
