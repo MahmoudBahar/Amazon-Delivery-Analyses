@@ -81,7 +81,3 @@ This project is licensed under the MIT License.
 For any queries or suggestions, feel free to reach out:  
 - **Email**: mahmoudbahar585@outlook.com  
 - **GitHub**: [MahmoudBahar](https://github.com/MahmoudBahar)  
-
----
-
-This README provides a **clear, structured, and engaging** overview of your project, making it easy for users to understand and explore its functionalities. Let me know if you'd like any tweaks! 🚀
