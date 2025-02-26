@@ -55,7 +55,7 @@ pip install streamlit pandas numpy matplotlib seaborn scikit-learn
 
 ### Clone the repository
    ```bash
-   git clone https://github.com/yourusername/Amazon-Delivery-Analyses.git
+   git clone https://github.com/MahmoudBahar/Amazon-Delivery-Analyses.git
    cd Amazon-Delivery-Analyses
    ```
 
@@ -70,9 +70,6 @@ pip install streamlit pandas numpy matplotlib seaborn scikit-learn
    - Customer ratings and feedback.  
 
 3. Get insights into delivery performance, predict delays, and improve logistics planning.  
-
-## Demo  
-👉 [Explore the Dashboard](https://mb-delivery.streamlit.app/)  
 
 ## License 📜  
 This project is licensed under the MIT License.  
