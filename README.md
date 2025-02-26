@@ -72,7 +72,7 @@ pip install streamlit pandas numpy matplotlib seaborn scikit-learn
 3. Get insights into delivery performance, predict delays, and improve logistics planning.  
 
 ## Demo  
-No video available, but you can try the app directly! 👉 [Explore the Dashboard](https://mb-delivery.streamlit.app/)  
+👉 [Explore the Dashboard](https://mb-delivery.streamlit.app/)  
 
 ## License 📜  
 This project is licensed under the MIT License.  
